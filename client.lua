@@ -26,6 +26,8 @@ RegisterCommand("help", function(source, args, raw)
 						description = 'Doctor Is Arriving',
 						type = 'success'
 					})
+				elseif Config.Notify == 'standalone' then
+					drawNativeNotification('Medic Is On The Way')
 				end	
 			else
 				if EMSOnline > Config.Doctor then
@@ -37,7 +39,9 @@ RegisterCommand("help", function(source, args, raw)
 							description = 'There Are Too Many Doctors Online',
 							type = 'error'
 						})
-					end
+					elseif Config.Notify == 'standalone' then
+						drawNativeNotification('There Are Too Many Doctors Online')
+					end	
 				elseif not hasEnoughMoney then
 					if Config.Notify == 'qb' then 
 						QBCore.Functions.Notify('Not Enough Money', 'error', 2500)
@@ -47,7 +51,9 @@ RegisterCommand("help", function(source, args, raw)
 							description = 'Not Enough Money',
 							type = 'error'
 						})
-					end
+					elseif Config.Notify == 'standalone' then
+						drawNativeNotification('Not Enough Money')
+					end	
 				else
 					if Config.Notify == 'qb' then 
 						QBCore.Functions.Notify('Doctors are on the way', 'success', 2500)
@@ -57,7 +63,9 @@ RegisterCommand("help", function(source, args, raw)
 							description = 'Doctors are on the way',
 							type = 'success'
 						})
-					end
+					elseif Config.Notify == 'standalone' then
+						drawNativeNotification('Doctors are on the way')
+					end	
 				end	
 			end
 		end)
@@ -70,7 +78,9 @@ RegisterCommand("help", function(source, args, raw)
 				description = 'This Can Only Be Used When Dead',
 				type = 'error'
 			})
-		end
+		elseif Config.Notify == 'standalone' then
+			drawNativeNotification('This can only be used when dead')
+		end	
 	end
 end)
 
