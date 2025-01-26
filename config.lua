@@ -8,5 +8,5 @@ Config.Price = 100
 Config.ReviveTime = 10000  --in msec
 
 -- StarFall Edits
-Config.Notify = 'qb'  -- Options are ox or qb working on others
+Config.Notify = 'qb'  -- Options are ox or qb standalone working on others
 
