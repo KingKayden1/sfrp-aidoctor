@@ -4,7 +4,7 @@ game 'gta5'
 author 'StarFallTeam Edits
 description 'HHFW AI Doc [QB]'
 
-version '0.1.5'
+version '0.1.6'
 
 client_scripts 'client.lua'
 
